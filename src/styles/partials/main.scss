@@ -1,16 +1,29 @@
 html {
   font-size: $fs-main;
+
+  @include media(1400) {
+    font-size: 22px;
+  }
+
+  @include media(992) {
+    font-size: 18px;
+  }
+
+  @include media("sm") {
+    font-size: 16px;
+  }
+
+  @include media(400) {
+    font-size: 16px;
+  }
 }
 body {
   font-family: $mainFont;
+  background-color: $backgroundColor;
   color: $textMainColor;
 }
 
-// a{
-// 	color: $selectColor1;
-// 	text-decoration: underline;
-// 	&:hover{
-// 		color: $selectColor2;
-// 		text-decoration: none;
-// 	}
-// }
+a {
+  color: $textMainColor;
+  text-decoration: none;
+}

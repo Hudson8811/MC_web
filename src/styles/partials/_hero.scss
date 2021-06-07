@@ -1,0 +1,153 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 1284px;
+  text-transform: uppercase;
+
+  @include media(1400) {
+    width: 1024px;
+  }
+
+  @include media("md") {
+    width: 500px;
+  }
+
+  @include media("xs") {
+    width: 90%;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-contacts {
+    &__links {
+      margin-top: 8px !important;
+      text-transform: none;
+
+      @include media(400) {
+        margin-top: 15px !important;
+      }
+    }
+
+    &__social {
+      margin-top: 25px;
+
+      @include media(1400) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    justify-content: center;
+
+    @include media(400) {
+      flex-direction: column;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        @include media(400) {
+          margin-bottom: 15px;
+        }
+
+        &::after {
+          content: "|";
+          margin: 0 15px;
+
+          @include media(400) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__link {
+      transition: ease-out 0.3s;
+
+      @include media(993, false) {
+        &:hover {
+          color: $textTitleColor;
+          transition: ease-out 0.3s;
+        }
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+      &:not(:last-child) {
+        margin-right: 17px;
+      }
+
+      @include media("sm") {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__icon {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    max-width: 664px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 125%;
+
+    @include media(1400) {
+      font-size: 64px;
+    }
+
+    @include media("md") {
+      font-size: 2.5rem;
+    }
+
+    @include media("md") {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    margin-top: 82px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+
+    @include media(1400) {
+      margin-top: 42px;
+      font-size: 1rem;
+    }
+
+    @include media(400) {
+      margin-top: 30px;
+    }
+  }
+
+  &__contacts {
+    max-width: 664px;
+    margin-top: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125%;
+
+    @include media(1400) {
+      font-size: 1rem;
+    }
+  }
+}

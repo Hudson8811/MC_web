@@ -6,7 +6,6 @@
 /* mixin */
 @import "base/mixin";
 
-
 /* main */
 @import "partials/main";
 
@@ -15,5 +14,5 @@
 @import "partials/header";
 @import "partials/footer";
 
-
-
+@import "partials/global";
+@import "partials/hero";
